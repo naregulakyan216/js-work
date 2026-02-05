@@ -14,14 +14,14 @@ else{
 }
 document.getElementById("toms").innerHTML=age + " " + toms ;
 
-
+// **************************
 
 let tiv = -5;
 let text;
 if(tiv>0){
     text = "tivy drakan e";
 }
-else if(tiv=0){
+else if(tiv=0){  // = change to === (= նշանակում է "վերագրել", իսկ === նշանակում է "համեմատել")
     text = " tivy havasar e 0";
 }
 else{
@@ -29,9 +29,10 @@ else{
 }
 document.getElementById("tiv").innerHTML=tiv + " " + text;
 
+// **************************
 
 
-let hour = new Date() .getHours();
+let hour = new Date() .getHours(); // new Date().getHours();
 let  day;
 if(hour>=5 && hour<=11){
     day = "bari luys";
@@ -46,6 +47,9 @@ else{
     day = "bari gisher ";
 }
 document.getElementById("hour").innerHTML=hour + " " + day;
+
+
+// **************************
 
 
 let month = 4;
@@ -72,6 +76,8 @@ switch(month) {
 }
 document.getElementById("days").innerHTML=month + " " + text1;
 
+// **************************
+
 
 let kod = 2;
 let anun;
@@ -91,6 +97,7 @@ switch(kod){
 }
 document.getElementById("kod").innerHTML=kod + " " + anun;
 
+// **************************
 
 let tar = "B";
 let gnahatakan;
@@ -133,7 +140,7 @@ document.getElementById("tar").innerHTML=tar + " " + gnahatakan;
 //     alert("false");
 // }
 
-let number = " ";
+let number = " "; // ""
 for(let tiv=5;tiv<9;tiv++ ){
     number += "hamarn e" + tiv + "<br>";
 }
@@ -149,23 +156,35 @@ for(let tiv1=0;tiv1<name1.length;tiv1++){
 document.getElementById("name1").innerHTML=anunner;
 
 
-let number1 = " ";
+let number1 = " "; // ""
 for(let number2=1;number2<20;number2++){
     number1 += "tiv" + number2 + "<br>";
 }
 document.getElementById("number1").innerHTML=number1;
 
 
-let number3 = " ";
+let number3 = " "; // ""
 for(let number4 = 10;number4>1;number4--){
     number3 +="tiv" + number4 + "<br>";
 }
 document.getElementById("number3").innerHTML=number3;
 
+// **************************
 
 
 const password = "secret123";
-let text2 = " ";
-while(password !="secret123"){
+let text2 = " "; // ""
+while(password !="secret123"){ // != change to !==
     text2 = "gaxtnabary sxal e";
 }
+
+
+// Right code should be: with if (chnage paswword to passwordd & text2 to text22 to avoid conflict with previous code)
+const passwordd = "secret123";
+let text22 = "";
+if(passwordd === "secret123"){
+    text22 = "Գաղտնաբառը ճիշտ է!";
+} else{
+    text22 = "Գաղտնաբառը սխալ է!";
+}
+document.getElementById("password").innerHTML = text22;
